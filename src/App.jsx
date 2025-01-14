@@ -1,10 +1,17 @@
-// import { useState } from 'react'
+import { useState } from 'react'
+import ColorButton from "./ColorButton";
+import PickedColor from "./PickedColor";
 
 const App = () => {
+  const [selectedColor, setSelectedColor] = useState("")
 
   return (
     <>
-      <h1>Color Picker!</h1>
+      <PickedColor selectedColor = {selectedColor}/>
+
+      <ColorButton colorName = "yellow" setSelectedColor = {setSelectedColor}/>
+      <ColorButton colorName = "pink" setSelectedColor = {setSelectedColor}/>
+      <ColorButton colorName = "orange" setSelectedColor = {setSelectedColor}/>
     </>
   )
 }
